@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://vuejs.org/js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+  {{ message }}
+</div>
+
+<div id="app2">
+  {{ message }}
+</div>
+</body>
+<script>
+
+  const RootComponent = {
+    data() {
+      return {
+        message: 'Hello Vue2'
+      }
+    },
+    el: '#app'
+  }
+
+  new Vue(RootComponent)
+
+  // OR
+
+  const RootComponent2 = {
+    data() {
+      return {
+        message: 'Hello World!'
+      }
+    }
+  }
+
+  const app2 = new Vue(RootComponent2)
+
+  app2.$mount('#app2')
+
+</script>
+</html>

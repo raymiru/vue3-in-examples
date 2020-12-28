@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="app">
+  {{ message }}
+</div>
+</body>
+<script>
+  const { createApp, ref } = Vue
+
+  const RootComponent = {
+    setup() {
+      const message = ref('Hello Vue3')
+
+      return { message }
+    }
+  }
+
+ createApp(RootComponent)
+     .mount('#app')
+
+</script>
+</html>
